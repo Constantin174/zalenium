@@ -23,6 +23,7 @@ public class Environment {
 
     @VisibleForTesting
     public String getEnvVariable(String envVariableName) {
+        logger.info(String.format("getEnvVariable: %s - %s", envVariableName, System.getenv(envVariableName)));
         return System.getenv(envVariableName);
     }
 
